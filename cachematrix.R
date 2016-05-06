@@ -10,12 +10,13 @@ makeCacheMatrix <- function(x = matrix()) {
                 inv <<- NULL
         }
         get <- function() x
-        setinv <- function(Inverse) inv <<- invVal
+        setinv <- function(Inverse) inv <<- Inverse
         getinv <- function() inv
         list(set = set, get = get,
              setinv = setinv,
              getinv = getinv)
 }
+
 
 
 ## this function first checks whether there is an inverse already present, otherwise, a new inverse is computed 
